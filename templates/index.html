@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <button id="generate-btn">Generate Random Number</button>
+    <p id="random-number"></p>
+
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            fetch('/random_number')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('random-number').innerText = data;
+                });
+        });
+    </script>
+</body>
+</html>
