@@ -9,7 +9,7 @@ def index():
 
 @app.route('/random_number')
 def random_number():
-    return str(random.randint(1, 10))
+    return str(random.randint(10, 20))
 
 if __name__ == '__main__':
     app.run(debug=True)
